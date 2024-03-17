@@ -1,5 +1,15 @@
 {{page-title "EmployeeManagment"}}
 
 
+<nav class="navbar">
+    <img src="../assets/images/Coglogo.jpg" alt="">
+    <div>
+        <LinkTo class="nav-link" @route="home">Home</LinkTo>
+        <LinkTo class="nav-link" @route="about">about</LinkTo>
+        <LinkTo class="nav-link" @route="employees">employees</LinkTo>
+    </div>
 
-{{outlet}}
+</nav>
+<div class="container">
+    {{outlet}}
+</div>
