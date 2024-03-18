@@ -1,0 +1,30 @@
+{{page-title "CreateEmployee"}}
+<h1 class="text-center">ON BOARD EMPLOYEE</h1>
+<div class="form">
+    <form action="">
+        <div class="form-group">
+            <label for="">EmployeeId</label>
+            <input {{on "input" this.updateEmployeeId}} value="{{this.employeeId}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="">employeeName</label>
+            <input {{on "input" this.updateEmployeeName}} value="{{this.employeeName}}" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="">employeeSalary</label>
+            <input {{on "input" this.updateEmployeeSalary}} value="{{this.employeeSalary}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="">employeeDesignation</label>
+            <input {{on "input" this.updateEmployeeDesignation}} value="{{this.employeeDesignation}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="">employeeAddress</label>
+            <textarea {{on "input" this.updateEmployeeAddress}} value="{{this.employeeAddress}}"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" {{on "click" this.createEmployee}}>OnBoard</button>
+        </div>
+    </form>
+</div>

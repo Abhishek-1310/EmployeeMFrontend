@@ -133,3 +133,31 @@ button {
     height: 100vh;
     text-align: center;
 }
+
+.form-group {
+    margin: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form {
+    width: 60%;
+    margin: auto;
+}
