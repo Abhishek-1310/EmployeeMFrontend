@@ -10,7 +10,6 @@ export default class EmployeeDataService extends Service {
     );
 
     let datas = await response.json();
-    // console.log(datas);
     let allEmployees = this.store.peekAll('employee');
     allEmployees.forEach((employee) => {
       if (!datas.find((emp) => emp.employeeId === employee.employeeId)) {
@@ -37,18 +36,32 @@ export default class EmployeeDataService extends Service {
       }
       return existingEmployee;
     });
-    // return datas.map((emp) => {
-    //   let existingEmployee = this.store.peekRecord('employee', emp.employeeId);
-    //   if (!existingEmployee) {
-    //     return this.store.createRecord('employee', {
-    //       employeeId: emp.employeeId,
-    //       employeeName: emp.employeeName,
-    //       employeeAddress: emp.employeeAddress,
-    //       employeeDesignation: emp.employeeDesignation,
-    //       employeeSalary: emp.employeeSalary,
-    //     });
-    //   }
-    //   return existingEmployee;
-    // });
+  }
+
+  async createEmployee(employee) {
+    console.log(employee);
+    try {
+      let response = await fetch(
+        'https://qudjoggbekw62q7siatj73o4p40uukaw.lambda-url.us-east-1.on.aws/',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(employee),
+        }
+      );
+      console.log(response);
+      if (response.ok) {
+        console.log('Data posted successfully');
+        return true;
+      } else {
+        console.error('response is not ok');
+        return false;
+      }
+    } catch (error) {
+      console.error('Error posting data', error);
+      return false;
+    }
   }
 }
