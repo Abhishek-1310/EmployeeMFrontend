@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
@@ -35,6 +36,7 @@ export default class CreateEmployeeController extends Controller {
   @action
   async createEmployee(event) {
     event.preventDefault();
+    //denai the default behaviour of form
 
     let newEmployee = {
       employeeId: this.employeeId,

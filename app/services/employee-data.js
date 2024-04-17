@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Service from '@ember/service';
 import { inject as service } from '@ember/service';
 
@@ -6,9 +7,8 @@ export default class EmployeeDataService extends Service {
 
   async loadData() {
     let response = await fetch(
-      'https://jd7ptn4xkln7nn3v2s6p6u7y2e0difsp.lambda-url.us-east-1.on.aws/'
+      'https://wp24fcebktgpgxra2ebjqbppai0zgoch.lambda-url.us-east-1.on.aws/'
     );
-
     let datas = await response.json();
     let allEmployees = this.store.peekAll('employee');
     allEmployees.forEach((employee) => {
@@ -42,7 +42,7 @@ export default class EmployeeDataService extends Service {
     console.log(employee);
     try {
       let response = await fetch(
-        'https://qudjoggbekw62q7siatj73o4p40uukaw.lambda-url.us-east-1.on.aws/',
+        'https://wsca2bccmjjguuzmmx2ywafwya0pahju.lambda-url.us-east-1.on.aws/',
         {
           method: 'POST',
           headers: {
