@@ -45,6 +45,7 @@ export default class CreateEmployeeController extends Controller {
       employeeSalary: this.employeeSalary,
       employeeDesignation: this.employeeDesignation,
     };
-    console.log(newEmployee);
+    await this.employeeData.createEmployee(newEmployee);
+    
   }
 }
