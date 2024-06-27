@@ -12,4 +12,5 @@ Router.map(function () {
   this.route('about');
   this.route('contact');
   this.route('create-employee');
+  this.route('updateEmployee');
 });

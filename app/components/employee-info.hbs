@@ -7,22 +7,23 @@
     {{#each @employees as |employee|}}
     <div class=" card1">
         <h1>{{employee.employeeName}}</h1>
-        {{!-- <LinkTo @route="employees/details" @model="{{employee.employeeId}}">Details</LinkTo> --}}
 
 
         <div class="details">
-            <span>Age</span>
-            <h3 style="color: azure; display:inline;">{{employee.employeeDesignation}}</h3>
+            <span>Designation</span>
+            <p style="color: azure; display:inline;">{{employee.employeeDesignation}}</p>
             <br>
             <span>Salary</span>
-            <h3 style="color: azure; display:inline;">{{employee.employeeSalary}}</h3>
+            <p style="color: azure; display:inline;">{{employee.employeeSalary}}</p>
             <br>
             <span>Address</span>
-            <h3 style="color: azure; display:inline;">{{employee.employeeAddress}}</h3>
+            <p style="color: azure; display:inline;">{{employee.employeeAddress}}</p>
 
         </div>
 
-
+    <button {{action "deleteEmployee" employee}} class="button" type="button">Delete</button>
+    <button @route="updateEmployee" class="button" type="button">Update</button>
+    
     </div>
     {{/each}}
     {{/if}}

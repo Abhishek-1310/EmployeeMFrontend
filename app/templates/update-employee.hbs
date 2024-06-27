@@ -1,0 +1,30 @@
+{{page-title "UpdateEmployee"}}
+<h1 class="text-center">Update EMPLOYEE Data</h1>
+<div class="form">
+    <form action="">
+        <div class="form-group">
+            <label for="" class="level rajdhani-light">EmployeeId</label>
+            <input {{on "input" this.updateEmployeeId}} value="{{this.employeeId}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="" class="level rajdhani-light">employeeName</label>
+            <input {{on "input" this.updateEmployeeName}} value="{{this.employeeName}}" type="text" />
+        </div>
+
+        <div class="form-group">
+            <label for="" class="level rajdhani-light">employeeSalary</label>
+            <input {{on "input" this.updateEmployeeSalary}} value="{{this.employeeSalary}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="" class="level rajdhani-light">employeeDesignation</label>
+            <input {{on "input" this.updateEmployeeDesignation}} value="{{this.employeeDesignation}}" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="" class="level rajdhani-light">employeeAddress</label>
+            <textarea {{on "input" this.updateEmployeeAddress}} value="{{this.employeeAddress}}"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" {{on "click" this.updateEmployee}}>Update</button>
+        </div>
+    </form>
+</div>

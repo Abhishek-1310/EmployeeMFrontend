@@ -1,9 +1,8 @@
-/* eslint-disable prettier/prettier */
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
-export default class CreateEmployeeController extends Controller {
+export default class UpdateEmployeeController extends Controller {
   @service employeeData;
   @service router;
   employeeId = '';
@@ -34,9 +33,8 @@ export default class CreateEmployeeController extends Controller {
     this.employeeDesignation = event.target.value;
   }
   @action
-  async createEmployee(event) {
+  async updateEmployee(event) {
     event.preventDefault();
-    
 
     let newEmployee = {
       employeeId: this.employeeId,
@@ -45,6 +43,6 @@ export default class CreateEmployeeController extends Controller {
       employeeSalary: this.employeeSalary,
       employeeDesignation: this.employeeDesignation,
     };
-    await this.employeeData.createEmployee(newEmployee);
+    await this.employeeData.updateEmployee(newEmployee);
   }
 }

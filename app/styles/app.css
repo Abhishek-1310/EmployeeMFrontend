@@ -28,7 +28,7 @@ p {
     background-image: url(../assets/images/back2.webp);
     background-position: center;
     background-size: cover;
-    height: 100%;
+    height: 100vh;
 }
 
 .text-center {
@@ -49,13 +49,16 @@ p {
     border: solid 2px black;
     border-radius: 14px;
     margin: 10px;
-    position: relative;
+    /* position: relative; */
+    width: 320px;
+    height: 218px
 }
 
 .bord {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 16px;
+    padding: 10px;
 }
 
 .level {
@@ -89,8 +92,12 @@ img {
 
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+li {
+    color: #f1ecec;
+    padding: 0px;
 }
 
 address {
@@ -175,4 +182,7 @@ textarea {
 .form {
     width: 60%;
     margin: auto;
+}
+a{
+    color:#f4f4f4
 }
