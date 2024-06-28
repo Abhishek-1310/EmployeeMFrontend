@@ -57,7 +57,7 @@ export default class EmployeeDataService extends Service {
     console.log(employee);
     try {
       let response = await fetch(
-        'https://wsca2bccmjjguuzmmx2ywafwya0pahju.-url.us-east-1.on.aws/',
+        'https://kfcvq64eeg.execute-api.us-east-1.amazonaws.com/dev/employee',
         {
           method: 'PUT',
           headers: {
@@ -67,8 +67,9 @@ export default class EmployeeDataService extends Service {
         }
       );
       console.log(response);
+      console.log('yes');
       if (response.ok) {
-        console.log('Data posted successfully');
+        console.log('Data updated  successfully');
         return true;
       } else {
         console.error('response is not ok');

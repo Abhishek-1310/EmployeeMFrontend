@@ -24,7 +24,17 @@
             <textarea {{on "input" this.updateEmployeeAddress}} value="{{this.employeeAddress}}"></textarea>
         </div>
         <div class="text-center">
-            <button type="submit" {{on "click" this.updateEmployee}}>Update</button>
+            <button type="submit" {{on "click" this.updateEmployee}} class="button1">Update</button>
+            <LinkTo class="nav-link" @route="employees" class="update" type="button">Back</LinkTo>
         </div>
     </form>
+</div>
+<div style="text-align:center; margin-top:20px;">
+    {{#if isSuccess}}
+    <p style="color:rgb(198, 248, 198);"> Employee data updated successfully!</p>
+    {{else}}
+    {{#if errorMessage}}
+    <p style="color:rgb(252, 207, 207);"> {{errorMessage}}</p>
+    {{/if}}
+    {{/if}}
 </div>

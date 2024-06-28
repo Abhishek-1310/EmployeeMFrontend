@@ -1,6 +1,6 @@
 {{!-- {{yield}} --}}
 
-<button {{action "handleClick" }} class="button" type="button">Employees</button>
+<button {{action "handleClick" }} class="button1" type="button">Employees</button>
 
 <div class="bord">
     {{#if this.isExpand}}
@@ -22,7 +22,8 @@
         </div>
 
     <button {{action "deleteEmployee" employee}} class="button" type="button">Delete</button>
-    <button @route="updateEmployee" class="button" type="button">Update</button>
+    
+    <LinkTo class="nav-link" @route="updateEmployee" class="update" type="button">Update</LinkTo>
     
     </div>
     {{/each}}

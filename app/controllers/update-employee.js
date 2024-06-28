@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
-
+import { tracked } from '@glimmer/tracking';
 export default class UpdateEmployeeController extends Controller {
   @service employeeData;
   @service router;
@@ -10,6 +10,9 @@ export default class UpdateEmployeeController extends Controller {
   employeeAddress = '';
   employeeSalary = '';
   employeeDesignation = '';
+
+  @tracked isSuccess = false;
+  @tracked errorMessage = '';
 
   @action
   updateEmployeeId(event) {
@@ -43,6 +46,20 @@ export default class UpdateEmployeeController extends Controller {
       employeeSalary: this.employeeSalary,
       employeeDesignation: this.employeeDesignation,
     };
-    await this.employeeData.updateEmployee(newEmployee);
+    try {
+      await this.employeeData.updateEmployee(newEmployee);
+      this.isSuccess = true;
+    } catch (error) {
+      console.error('Error posting data', error);
+    } finally {
+      console.log('hello');
+      this.setProperties({
+        employeeId: '',
+        employeeName: '',
+        employeeAddress: '',
+        employeeSalary: '',
+        employeeDesignation: '',
+      });
+    }
   }
 }
