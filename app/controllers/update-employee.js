@@ -11,7 +11,6 @@ export default class UpdateEmployeeController extends Controller {
   employeeSalary = '';
   employeeDesignation = '';
 
-  
   @tracked isSuccess = false;
   @tracked errorMessage = '';
 

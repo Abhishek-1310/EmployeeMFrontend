@@ -1,4 +1,5 @@
 {{page-title "CreateEmployee"}}
+<Navbar />
 <h1 class="text-center">ON BOARD EMPLOYEE</h1>
 <div class="form">
     <form action="">
@@ -7,7 +8,7 @@
             <input {{on "input" this.updateEmployeeId}} value="{{this.employeeId}}" type="text" />
         </div>
         <div class="form-group">
-            <label for="" class="level rajdhani-light">employeeName</label>
+            <label for="" class="level rajdhani-light">employeeFirstName</label>
             <input {{on "input" this.updateEmployeeName}} value="{{this.employeeName}}" type="text" />
         </div>
 

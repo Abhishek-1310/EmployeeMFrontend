@@ -23,7 +23,7 @@ export default class EmployeeInfoComponent extends Component {
       const response = await fetch(url, {
         method: 'DELETE',
       });
-      
+
       if (response.ok) {
         console.log(response);
         this.store.unloadRecord(employee);

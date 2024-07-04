@@ -1,0 +1,23 @@
+{{page-title "Signup"}}
+<div class="signup-container">
+    <div class="signup-form">
+        <h7>Sign Up</h7>
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            {{input type="text" id="name" name="name" value=name}}
+
+            <label for="email">Email:</label>
+            {{input type="email" id="email" name="email" value=email}}
+
+            <label for="password">Password:</label>
+            {{input type="password" id="password" name="password"}}
+
+            <label for="confirm-password">Confirm Password:</label>
+            {{input type="password" id="confirm-password" name="confirm-password"}}
+
+            <button type="submit">Sign Up</button>
+            <LinkTo @route="login" class="btn">Login</LinkTo>
+        </form>
+        
+    </div>
+</div>
