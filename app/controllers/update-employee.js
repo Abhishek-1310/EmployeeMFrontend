@@ -11,6 +11,7 @@ export default class UpdateEmployeeController extends Controller {
   employeeSalary = '';
   employeeDesignation = '';
 
+  
   @tracked isSuccess = false;
   @tracked errorMessage = '';
 
@@ -35,6 +36,7 @@ export default class UpdateEmployeeController extends Controller {
   updateEmployeeDesignation(event) {
     this.employeeDesignation = event.target.value;
   }
+
   @action
   async updateEmployee(event) {
     event.preventDefault();
@@ -52,7 +54,6 @@ export default class UpdateEmployeeController extends Controller {
     } catch (error) {
       console.error('Error posting data', error);
     } finally {
-      console.log('hello');
       this.setProperties({
         employeeId: '',
         employeeName: '',

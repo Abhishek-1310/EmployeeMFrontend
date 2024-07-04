@@ -42,6 +42,25 @@ p {
     background-image: url(../assets/images/back8.webp);
     background-position: center;
     background-size: cover;
+    display: flex;    
+    justify-content: space-between;
+}
+
+.employee-photo {
+    width: 30%;
+    /* adjust the width as needed */
+}
+
+.employee-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.meaningful-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    /* adjust the color as needed */
 }
 
 .card1 {
